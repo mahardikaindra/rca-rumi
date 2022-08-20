@@ -1,0 +1,14 @@
+{
+  "name": "rca-rumi",
+  "version": "1.0.0",
+  "description": "Working to apply clean architecture to react codebases",
+  "keywords": [
+    "react",
+    "react-native",
+    "clean-architecture",
+    "boilerplate",
+    "typescript"
+  ],
+  "author": "Raka Mahardika",
+  "license": "MIT"
+}
