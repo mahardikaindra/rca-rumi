@@ -10,15 +10,13 @@
 
 import React, {type PropsWithChildren} from 'react';
 import {
-  SafeAreaView,
   ScrollView,
-  StatusBar,
   StyleSheet,
   Text,
   useColorScheme,
   View,
 } from 'react-native';
-
+import {Container} from './components';
 import {
   Colors,
   DebugInstructions,
@@ -65,8 +63,7 @@ const App = () => {
   };
 
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
+    <Container>
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
@@ -91,7 +88,7 @@ const App = () => {
           <LearnMoreLinks />
         </View>
       </ScrollView>
-    </SafeAreaView>
+    </Container>
   );
 };
 
@@ -103,14 +100,17 @@ const styles = StyleSheet.create({
   sectionTitle: {
     fontSize: 24,
     fontWeight: '600',
+    fontFamily: 'NunitoSans-Bold',
   },
   sectionDescription: {
     marginTop: 8,
     fontSize: 18,
     fontWeight: '400',
+    fontFamily: 'NunitoSans-Regular',
   },
   highlight: {
     fontWeight: '700',
+    fontFamily: 'NunitoSans-Light',
   },
 });
 
