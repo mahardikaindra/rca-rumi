@@ -3,17 +3,21 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "android": "react-native run-android",
-    "ios": "react-native run-ios",
+    "android": "ENVFILE=.env react-native run-android",
+    "both": "ENVFILE=.env react-native run-android && ENVFILE=.env react-native run-ios",
+    "ios": "ENVFILE=.env react-native run-ios",
+    "ios-install": "npx pod-install ios",
     "start": "react-native start --reset-cache",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "storybook": "start-storybook -p 7007",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "remove-watch": "watchman watch-del '/Users/rakamahardika/Office/rca-rumi/appnative' ; watchman watch-project '/Users/rakamahardika/Office/rca-rumi/appnative'"
   },
   "dependencies": {
     "react": "18.0.0",
     "react-native": "0.69.4",
+    "react-native-config": "^1.4.6",
     "react-redux": "^8.0.2"
   },
   "devDependencies": {
