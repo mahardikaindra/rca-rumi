@@ -9,13 +9,7 @@
  */
 
 import React, {type PropsWithChildren} from 'react';
-import {
-  ScrollView,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+import {ScrollView, StyleSheet, Text, useColorScheme, View} from 'react-native';
 import {Container} from './components';
 import {
   Colors,

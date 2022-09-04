@@ -9,19 +9,11 @@
  */
 
 import React, {type PropsWithChildren} from 'react';
-import {
-  SafeAreaView,
-  StatusBar,
-  useColorScheme,
-} from 'react-native';
+import {SafeAreaView, StatusBar, useColorScheme} from 'react-native';
 
-import {
-  Colors,
-} from 'react-native/Libraries/NewAppScreen';
+import {Colors} from 'react-native/Libraries/NewAppScreen';
 
-const Container: React.FC<
-  PropsWithChildren<{}>
-> = ({children}) => {
+const Container: React.FC<PropsWithChildren<{}>> = ({children}) => {
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
