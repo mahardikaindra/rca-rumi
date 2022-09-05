@@ -10,7 +10,9 @@
 
 import React, {
   type PropsWithChildren,
-  useCallback, useEffect, useState,
+  useCallback,
+  useEffect,
+  useState,
 } from 'react';
 import {ScrollView, StyleSheet, Text, useColorScheme, View} from 'react-native';
 import {Container} from './components';
@@ -59,13 +61,14 @@ const App = () => {
   const [storybookActive, setStorybookActive] = useState(false);
 
   const toggleStorybook = useCallback(
-    () => setStorybookActive(active => !active)
-  ,[]);
+    () => setStorybookActive(active => !active),
+    [],
+  );
 
   useEffect(() => {
     if (__DEV__) {
       // eslint-disable-next-line @typescript-eslint/no-var-requires
-      DevMenu.addItem("Toggle Storybook", toggleStorybook);
+      DevMenu.addItem('Toggle Storybook', toggleStorybook);
     }
   }, [toggleStorybook]);
 
@@ -73,37 +76,35 @@ const App = () => {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
 
-  if(storybookActive) {
-    return (
-      <StorybookUIRoot />
-    );
+  if (storybookActive) {
+    return <StorybookUIRoot />;
   } else {
     return (
       <Container>
-      <ScrollView
-      contentInsetAdjustmentBehavior="automatic"
-      style={backgroundStyle}>
-      <Header />
-      <View
-      style={{
-        backgroundColor: isDarkMode ? Colors.black : Colors.white,
-      }}>
-      <Section title="Step One">
-      Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-      screen and then come back to see your edits.
-      </Section>
-      <Section title="See Your Changes">
-      <ReloadInstructions />
-      </Section>
-      <Section title="Debug">
-      <DebugInstructions />
-      </Section>
-      <Section title="Learn More">
-      Read the docs to discover what to do next:
-      </Section>
-      <LearnMoreLinks />
-      </View>
-      </ScrollView>
+        <ScrollView
+          contentInsetAdjustmentBehavior="automatic"
+          style={backgroundStyle}>
+          <Header />
+          <View
+            style={{
+              backgroundColor: isDarkMode ? Colors.black : Colors.white,
+            }}>
+            <Section title="Step One">
+              Edit <Text style={styles.highlight}>App.tsx</Text> to change this
+              screen and then come back to see your edits.
+            </Section>
+            <Section title="See Your Changes">
+              <ReloadInstructions />
+            </Section>
+            <Section title="Debug">
+              <DebugInstructions />
+            </Section>
+            <Section title="Learn More">
+              Read the docs to discover what to do next:
+            </Section>
+            <LearnMoreLinks />
+          </View>
+        </ScrollView>
       </Container>
     );
   }
