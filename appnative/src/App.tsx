@@ -25,6 +25,7 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 import StorybookUIRoot from '../storybook';
 import DevMenu from 'react-native-dev-menu';
+import codePush from 'react-native-code-push';
 
 const Section: React.FC<
   PropsWithChildren<{
@@ -131,4 +132,9 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+const codePushOptions = {
+  checkFrequency: codePush.CheckFrequency.MANUAL,
+  updateDialog: false,
+};
+
+export default codePush(codePushOptions)(App);

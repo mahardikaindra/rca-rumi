@@ -12,6 +12,12 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "storybook": "start-storybook -p 7007",
     "build-storybook": "build-storybook",
+    "appcenter-production": "appcenter codepush release-react -a developer.earetech-gmail.com/AppNative -d Production",
+    "appcenter-development": "appcenter codepush release-react -a developer.earetech-gmail.com/AppNative -d Development",
+    "appcenter-staging": "appcenter codepush release-react -a developer.earetech-gmail.com/AppNative -d Staging",
+    "appcenter-ios-production": "appcenter codepush release-react -a developer.earetech-gmail.com/AppNative-iOS -d Production",
+    "appcenter-ios-staging": "appcenter codepush release-react -a developer.earetech-gmail.com/AppNative-iOS -d Staging",
+    "appcenter-ios-development": "appcenter codepush release-react -a developer.earetech-gmail.com/AppNative-iOS -d Development",
     "remove-watch": "watchman watch-del '/Users/rakamahardika/Office/rca-rumi/appnative' ; watchman watch-project '/Users/rakamahardika/Office/rca-rumi/appnative'"
   },
   "dependencies": {
@@ -19,6 +25,7 @@
     "husky": "^4.3.8",
     "react": "18.0.0",
     "react-native": "0.69.4",
+    "react-native-code-push": "^7.0.5",
     "react-native-config": "^1.4.6",
     "react-native-dev-menu": "^4.1.1",
     "react-redux": "^8.0.2"
