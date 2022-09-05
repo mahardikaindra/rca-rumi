@@ -67,7 +67,6 @@ const App = () => {
 
   useEffect(() => {
     if (__DEV__) {
-      // eslint-disable-next-line @typescript-eslint/no-var-requires
       DevMenu.addItem('Toggle Storybook', toggleStorybook);
     }
   }, [toggleStorybook]);
