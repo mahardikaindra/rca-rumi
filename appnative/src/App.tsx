@@ -8,7 +8,10 @@
  * @format
  */
 
-import React, {type PropsWithChildren} from 'react';
+import React, {
+  type PropsWithChildren,
+  useCallback, useEffect, useState,
+} from 'react';
 import {ScrollView, StyleSheet, Text, useColorScheme, View} from 'react-native';
 import {Container} from './components';
 import {
@@ -18,6 +21,8 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import StorybookUIRoot from '../storybook';
+import DevMenu from 'react-native-dev-menu';
 
 const Section: React.FC<
   PropsWithChildren<{
@@ -51,39 +56,57 @@ const Section: React.FC<
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
+  const [storybookActive, setStorybookActive] = useState(false);
+
+  const toggleStorybook = useCallback(
+    () => setStorybookActive(active => !active)
+  ,[]);
+
+  useEffect(() => {
+    if (__DEV__) {
+      // eslint-disable-next-line @typescript-eslint/no-var-requires
+      DevMenu.addItem("Toggle Storybook", toggleStorybook);
+    }
+  }, [toggleStorybook]);
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
 
-  return (
-    <Container>
+  if(storybookActive) {
+    return (
+      <StorybookUIRoot />
+    );
+  } else {
+    return (
+      <Container>
       <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
-        </View>
+      contentInsetAdjustmentBehavior="automatic"
+      style={backgroundStyle}>
+      <Header />
+      <View
+      style={{
+        backgroundColor: isDarkMode ? Colors.black : Colors.white,
+      }}>
+      <Section title="Step One">
+      Edit <Text style={styles.highlight}>App.tsx</Text> to change this
+      screen and then come back to see your edits.
+      </Section>
+      <Section title="See Your Changes">
+      <ReloadInstructions />
+      </Section>
+      <Section title="Debug">
+      <DebugInstructions />
+      </Section>
+      <Section title="Learn More">
+      Read the docs to discover what to do next:
+      </Section>
+      <LearnMoreLinks />
+      </View>
       </ScrollView>
-    </Container>
-  );
+      </Container>
+    );
+  }
 };
 
 const styles = StyleSheet.create({
@@ -109,4 +132,3 @@ const styles = StyleSheet.create({
 });
 
 export default App;
-// export {default} from './storybook';
