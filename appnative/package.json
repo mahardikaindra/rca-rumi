@@ -5,7 +5,7 @@
   "scripts": {
     "android": "ENVFILE=.env react-native run-android",
     "both": "ENVFILE=.env react-native run-android && ENVFILE=.env react-native run-ios",
-    "ios": "ENVFILE=.env react-native run-ios",
+    "ios": "rm -rf ~/Library/Developer/Xcode/DerivedData && ENVFILE=.env react-native run-ios",
     "ios-install": "npx pod-install ios",
     "start": "react-native start --reset-cache",
     "test": "jest",
@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.17.10",
+    "@react-native-firebase/app": "^15.4.0",
     "@react-navigation/native": "^6.0.12",
     "@react-navigation/native-stack": "^6.8.0",
     "husky": "^4.3.8",
