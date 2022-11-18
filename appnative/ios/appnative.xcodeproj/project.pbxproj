@@ -29,6 +29,9 @@
 		B67B8FE664BA4210847FDFFF /* NunitoSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5B1C52AEDC474EDD81DA1A2B /* NunitoSans-BoldItalic.ttf */; };
 		D8CB2331B06D4783949585AC /* NunitoSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1EC6E01B24474ECA8D9A44EE /* NunitoSans-ExtraBoldItalic.ttf */; };
 		F782D903B321409CAEED27E7 /* NunitoSans-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAB701FEA56C4423AF2C0D04 /* NunitoSans-BlackItalic.ttf */; };
+		ADBAD8C50F8A4660B21E0614 /* Lekton-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F287930DBA6C4B048F68FF8C /* Lekton-Bold.ttf */; };
+		709C2D4CC7284E4CB2019454 /* Lekton-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E834C31C4BBC4F1AA1383F2C /* Lekton-Italic.ttf */; };
+		C3383513D3424276BB4335D1 /* Lekton-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0EFFAC4377954659902CCE36 /* Lekton-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +77,9 @@
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		F60FDCF8BE0548B18BC548FB /* NunitoSans-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NunitoSans-Bold.ttf"; path = "../src/assets/fonts/NunitoSans-Bold.ttf"; sourceTree = "<group>"; };
 		FAB701FEA56C4423AF2C0D04 /* NunitoSans-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NunitoSans-BlackItalic.ttf"; path = "../src/assets/fonts/NunitoSans-BlackItalic.ttf"; sourceTree = "<group>"; };
+		F287930DBA6C4B048F68FF8C /* Lekton-Bold.ttf */ = {isa = PBXFileReference; name = "Lekton-Bold.ttf"; path = "../src/assets/fonts/Lekton-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E834C31C4BBC4F1AA1383F2C /* Lekton-Italic.ttf */ = {isa = PBXFileReference; name = "Lekton-Italic.ttf"; path = "../src/assets/fonts/Lekton-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0EFFAC4377954659902CCE36 /* Lekton-Regular.ttf */ = {isa = PBXFileReference; name = "Lekton-Regular.ttf"; path = "../src/assets/fonts/Lekton-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +149,9 @@
 				BB834D963D874FBABA585B5F /* NunitoSans-Regular.ttf */,
 				B7847AB0CADF466CAEC779DF /* NunitoSans-SemiBold.ttf */,
 				8993982320A648FCB184B112 /* NunitoSans-SemiBoldItalic.ttf */,
+				F287930DBA6C4B048F68FF8C /* Lekton-Bold.ttf */,
+				E834C31C4BBC4F1AA1383F2C /* Lekton-Italic.ttf */,
+				0EFFAC4377954659902CCE36 /* Lekton-Regular.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -312,6 +321,9 @@
 				62404D540F324FE68C1348FC /* NunitoSans-Regular.ttf in Resources */,
 				548EE56E60AD49A59B99E7BE /* NunitoSans-SemiBold.ttf in Resources */,
 				84F6A68F8BED4886AC91A0D7 /* NunitoSans-SemiBoldItalic.ttf in Resources */,
+				ADBAD8C50F8A4660B21E0614 /* Lekton-Bold.ttf in Resources */,
+				709C2D4CC7284E4CB2019454 /* Lekton-Italic.ttf in Resources */,
+				C3383513D3424276BB4335D1 /* Lekton-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

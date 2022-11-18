@@ -5,7 +5,7 @@
   "scripts": {
     "android": "ENVFILE=.env react-native run-android",
     "both": "ENVFILE=.env react-native run-android && ENVFILE=.env react-native run-ios",
-    "ios": "ENVFILE=.env react-native run-ios",
+    "ios": "ENVFILE=.env react-native run-ios --simulator='iPhone 8'",
     "ios-install": "npx pod-install ios",
     "start": "react-native start --reset-cache",
     "test": "jest",
@@ -25,6 +25,7 @@
     "@react-navigation/native": "^6.0.12",
     "@react-navigation/native-stack": "^6.8.0",
     "@reduxjs/toolkit": "^1.9.0",
+    "axios": "^1.1.3",
     "husky": "^4.3.8",
     "react": "18.0.0",
     "react-native": "0.69.5",
@@ -90,6 +91,9 @@
       "jsx",
       "json",
       "node"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!(react-native|@react-navigation|@react-native|react-native-swipe-gestures)/)"
     ]
   }
 }
