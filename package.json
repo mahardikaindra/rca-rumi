@@ -10,5 +10,9 @@
     "typescript"
   ],
   "author": "Raka Mahardika",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "jest-environment-node": "^26.6.2",
+    "jest-runner": "^26.6.3"
+  }
 }
