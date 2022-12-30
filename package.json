@@ -1,0 +1,24 @@
+{
+  "name": "rca-rumi",
+  "version": "1.0.0",
+  "description": "Working to apply clean architecture to react codebases",
+  "keywords": [
+    "react",
+    "react-native",
+    "clean-architecture",
+    "boilerplate",
+    "typescript"
+  ],
+  "scripts": {
+    "appnative-install": "cd frameworks/appnative && yarn install && cd ../../",
+    "appnative-android": "cd frameworks/appnative && yarn android",
+    "appnative-ios": "cd frameworks/appnative && yarn ios",
+    "appnative-start": "cd frameworks/appnative && yarn start"
+  },
+  "author": "Raka Mahardika",
+  "license": "MIT",
+  "devDependencies": {
+    "jest-environment-node": "^26.6.2",
+    "jest-runner": "^26.6.3"
+  }
+}
