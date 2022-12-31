@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "android": "ENVFILE=.env react-native run-android",
+    "android": "ENVFILE=.env react-native run-android --variant=devDebug",
+    "android-qiwii": "ENVFILE=.env.qiwii react-native run-android --variant=qiwiiDebug",
+    "android-sooltan": "ENVFILE=.env.sooltan react-native run-android --variant=sooltanDebug",
     "both": "ENVFILE=.env react-native run-android && ENVFILE=.env react-native run-ios --simulator='iPhone 14'",
     "ios": "rm -rf ~/Library/Developer/Xcode/DerivedData && ENVFILE=.env react-native run-ios --simulator='iPhone 14'",
     "ios-install": "npx pod-install ios",

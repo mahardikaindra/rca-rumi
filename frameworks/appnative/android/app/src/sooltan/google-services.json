@@ -1,0 +1,131 @@
+{
+  "project_info": {
+    "project_number": "419714484847",
+    "firebase_url": "https://bonum-2d3bc.firebaseio.com",
+    "project_id": "bonum-2d3bc",
+    "storage_bucket": "bonum-2d3bc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:419714484847:android:d22917676f0742db451b9a",
+        "android_client_info": {
+          "package_name": "com.bonum"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "419714484847-91flm21mk633vhl2h4iu2q9ejbsa4bse.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bonum",
+            "certificate_hash": "bf5fc83bfea78cdd732bf228dd5398cbbf241d3e"
+          }
+        },
+        {
+          "client_id": "419714484847-92ro2o5g9povef631rqqheolh53sdk54.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bonum",
+            "certificate_hash": "38bcba26ed797a1a7f196e71284447618cac908d"
+          }
+        },
+        {
+          "client_id": "419714484847-dki6q2ipvf4d7vdu5ofokna1hobvlolv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bonum",
+            "certificate_hash": "1e08b4e5c4339f355934816fd81c4b1d5d8f1905"
+          }
+        },
+        {
+          "client_id": "419714484847-hmk9kgiloqgajgvpv8ovbpfi34nes681.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bonum",
+            "certificate_hash": "a5bed61d475ea9e4564a16513e8c0af944e6f034"
+          }
+        },
+        {
+          "client_id": "419714484847-kvutt475aav67eqpdqq1e87bm0069u79.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bonum",
+            "certificate_hash": "665c35a7b2998f5e849bae93df774a3da101cbbf"
+          }
+        },
+        {
+          "client_id": "419714484847-ood6rpn7octdmnsqdrius6vk8jb0if0g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bonum",
+            "certificate_hash": "8a8761a849d6cac952d1d4dff4ea031cdb6b5bfc"
+          }
+        },
+        {
+          "client_id": "419714484847-5lto6qqpchu2bknd36r2i2rbmggtc3b5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzRV99RzSjW1BtjwOxHI_sPbRH7_zViQ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "419714484847-5lto6qqpchu2bknd36r2i2rbmggtc3b5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "419714484847-tb4suub9bogmd2ifsa7iccaq5qvbn4jb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.bonum"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:419714484847:android:bdc8122bd47d305d451b9a",
+        "android_client_info": {
+          "package_name": "com.bonum.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "419714484847-5lto6qqpchu2bknd36r2i2rbmggtc3b5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzRV99RzSjW1BtjwOxHI_sPbRH7_zViQ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "419714484847-5lto6qqpchu2bknd36r2i2rbmggtc3b5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "419714484847-tb4suub9bogmd2ifsa7iccaq5qvbn4jb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.bonum"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

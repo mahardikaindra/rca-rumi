@@ -1,0 +1,170 @@
+{
+  "project_info": {
+    "project_number": "870706612213",
+    "firebase_url": "https://qiwii-bd85e.firebaseio.com",
+    "project_id": "qiwii-bd85e",
+    "storage_bucket": "qiwii-bd85e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:870706612213:android:cfb86fea317ef14e",
+        "android_client_info": {
+          "package_name": "com.qiwii"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "870706612213-6t0u0r34o8rtd01ko8t8gttgan90fmrc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.qiwii",
+            "certificate_hash": "f2439c669013af76a6af24b62da448f927acb9bf"
+          }
+        },
+        {
+          "client_id": "870706612213-bt02qrpupsrgv68puljoc15mca0of1rv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.qiwii",
+            "certificate_hash": "ce3566aa8d1b6da200fa7c28ff2811fcd688fd9e"
+          }
+        },
+        {
+          "client_id": "870706612213-caj11qmq3ugregr12a9a01egdf49dkfs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.qiwii",
+            "certificate_hash": "983c86449f2fa8eb2f36417faa784be8e5648976"
+          }
+        },
+        {
+          "client_id": "870706612213-rh1rugtnvmffk7n8is0r0s5tr3epckn2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQXRVk0pFoeovAWiMH-znomIhW3apMVZg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "870706612213-rh1rugtnvmffk7n8is0r0s5tr3epckn2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "870706612213-41ecep8i0a843mucc9bv8tfbbbma2njs.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mobile.qiwii",
+                "app_store_id": "1640684034"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:870706612213:android:19d40ff485f81cf8a682bc",
+        "android_client_info": {
+          "package_name": "com.qiwii.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "870706612213-sj3mogpu0ddeuali56dairu93pr0b6tb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.qiwii.dev",
+            "certificate_hash": "f2439c669013af76a6af24b62da448f927acb9bf"
+          }
+        },
+        {
+          "client_id": "870706612213-rh1rugtnvmffk7n8is0r0s5tr3epckn2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQXRVk0pFoeovAWiMH-znomIhW3apMVZg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "870706612213-rh1rugtnvmffk7n8is0r0s5tr3epckn2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "870706612213-41ecep8i0a843mucc9bv8tfbbbma2njs.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mobile.qiwii",
+                "app_store_id": "1640684034"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:870706612213:android:ac3589096e734ba8",
+        "android_client_info": {
+          "package_name": "com.qiwii.development"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "870706612213-jl6lvk00omgp8q9f4o1h6lkb23j2on75.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.qiwii.development",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "870706612213-rapeacmtge8qtj4uqf881ia7is1jl1ov.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.qiwii.development",
+            "certificate_hash": "f2439c669013af76a6af24b62da448f927acb9bf"
+          }
+        },
+        {
+          "client_id": "870706612213-rh1rugtnvmffk7n8is0r0s5tr3epckn2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQXRVk0pFoeovAWiMH-znomIhW3apMVZg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "870706612213-rh1rugtnvmffk7n8is0r0s5tr3epckn2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "870706612213-41ecep8i0a843mucc9bv8tfbbbma2njs.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mobile.qiwii",
+                "app_store_id": "1640684034"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
