@@ -1,7 +1,7 @@
-import IUseCases from './interfaces/iUseCases';
-import SessionPresenter from '../../adapters/presenters/Session';
-import CharacterPresenter from '../../adapters/presenters/Character';
-import EpisodePresenter from '../../adapters/presenters/Episode';
+import IUseCases from "./interfaces/iUseCases";
+import SessionPresenter from "../../adapters/presenters/Session";
+import CharacterPresenter from "../../adapters/presenters/Character";
+import EpisodePresenter from "../../adapters/presenters/Episode";
 
 export default (useCases: IUseCases) => {
   return {

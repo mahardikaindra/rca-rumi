@@ -1,8 +1,8 @@
-import IRepositories from './interfaces/iRepositories';
-import IUseCases from './interfaces/iUseCases';
-import Session from '../../domains/useCases/Session';
-import Character from '../../domains/useCases/Character';
-import Episode from '../../domains/useCases/Episode';
+import IRepositories from "./interfaces/iRepositories";
+import IUseCases from "./interfaces/iUseCases";
+import Session from "../../domains/useCases/Session";
+import Character from "../../domains/useCases/Character";
+import Episode from "../../domains/useCases/Episode";
 
 export default (repositories: IRepositories): IUseCases => {
   return {

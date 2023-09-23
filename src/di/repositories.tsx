@@ -1,8 +1,8 @@
-import IRepositories from './interfaces/iRepositories';
-import IInfrastructures from './interfaces/iInfrastructures';
-import SessionRepository from '../../adapters/repositories/Session';
-import CharacterRepository from '../../adapters/repositories/Character';
-import EpisodeRepository from '../../adapters/repositories/Episode';
+import IRepositories from "./interfaces/iRepositories";
+import IInfrastructures from "./interfaces/iInfrastructures";
+import SessionRepository from "../../adapters/repositories/Session";
+import CharacterRepository from "../../adapters/repositories/Character";
+import EpisodeRepository from "../../adapters/repositories/Episode";
 
 export default (infrastructure: IInfrastructures): IRepositories => {
   return {

@@ -1,8 +1,8 @@
-import IPresenters from './interfaces/iPresenters';
-import infrastructures from './infrastructures';
-import repositories from './repositories';
-import useCases from './useCases';
-import presenters from './presenters';
+import IPresenters from "./interfaces/iPresenters";
+import infrastructures from "./infrastructures";
+import repositories from "./repositories";
+import useCases from "./useCases";
+import presenters from "./presenters";
 
 const cInfrastructures = infrastructures();
 const cRepositorires = repositories(cInfrastructures);
