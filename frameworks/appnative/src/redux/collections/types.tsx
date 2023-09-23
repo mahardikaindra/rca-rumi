@@ -1,2 +1,0 @@
-export const SET_DATA_MOVIES = 'SET_DATA_MOVIES';
-export const SET_CHARACTER_ID = 'SET_CHARACTER_ID';
