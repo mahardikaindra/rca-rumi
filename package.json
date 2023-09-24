@@ -1,24 +1,78 @@
 {
   "name": "rca-rumi",
-  "version": "1.0.0",
-  "description": "Working to apply clean architecture to react codebases",
-  "keywords": [
-    "react",
-    "react-native",
-    "clean-architecture",
-    "boilerplate",
-    "typescript"
-  ],
-  "scripts": {
-    "appnative-install": "cd frameworks/appnative && yarn install && cd ../../",
-    "appnative-android": "cd frameworks/appnative && yarn android",
-    "appnative-ios": "cd frameworks/appnative && yarn ios",
-    "appnative-start": "cd frameworks/appnative && yarn start"
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@storybook/addon-styling": "^1.3.7",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.53",
+    "@types/react": "^18.2.22",
+    "@types/react-dom": "^18.2.7",
+    "autoprefixer": "^10.4.16",
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
+    "postcss": "^8.4.30",
+    "prettier": "^3.0.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "typescript": "^4.9.5",
+    "web-vitals": "^2.1.4"
   },
-  "author": "Raka Mahardika",
-  "license": "MIT",
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ]
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
   "devDependencies": {
-    "jest-environment-node": "^26.6.2",
-    "jest-runner": "^26.6.3"
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@storybook/addon-essentials": "^7.4.4",
+    "@storybook/addon-interactions": "^7.4.4",
+    "@storybook/addon-links": "^7.4.4",
+    "@storybook/addon-onboarding": "^1.0.8",
+    "@storybook/blocks": "^7.4.4",
+    "@storybook/preset-create-react-app": "^7.4.4",
+    "@storybook/react": "^7.4.4",
+    "@storybook/react-webpack5": "^7.4.4",
+    "@storybook/testing-library": "^0.2.1",
+    "babel-plugin-named-exports-order": "^0.0.2",
+    "prop-types": "^15.8.1",
+    "storybook": "^7.4.4",
+    "tailwindcss": "^3.3.3",
+    "webpack": "^5.88.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
