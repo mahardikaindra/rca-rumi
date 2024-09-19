@@ -26,12 +26,12 @@ interface DetailInterface {
   episode: [];
 }
 
-const Detail = (props: any) => {
+const Favorites = (props: any) => {
   const [dataSource, setDataSource] = useState<DetailInterface>();
   const [episodeId, setDataEpisodeId] = useState([]);
   const [episodes, setDataEpisodes] = useState([]);
   const [isLoading, setLoading] = useState(true);
-  const [isSelect, setSelect] = useState(false);
+  const [isSelect, setSelect] = useState(true);
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
@@ -39,9 +39,11 @@ const Detail = (props: any) => {
   };
 
   useEffect(() => {
-    if (props.dataCharacter) {
+    if (props.dataFavoriteMovies.data) {
       (async () => {
-        const data = await di.character.getCharacter(props.dataCharacter.id);
+        const data = await di.character.getCharacter(
+          props.dataFavoriteMovies.data.id,
+        );
         if (data) {
           setLoading(false);
           setDataSource(data);
@@ -60,7 +62,7 @@ const Detail = (props: any) => {
         }
       })();
     }
-  }, [props.dataCharacter]);
+  }, [props.dataFavoriteMovies]);
 
   useEffect(() => {
     if (episodeId.length > 1) {
@@ -116,7 +118,7 @@ const Detail = (props: any) => {
           <TouchableOpacity
             onPress={() => {
               setSelect(!isSelect);
-              props.addToFavorites(dataSource);
+              props.removeFavorites(dataSource);
             }}>
             <Icon
               name={isSelect ? 'star' : 'star-o'}
@@ -137,7 +139,6 @@ const Detail = (props: any) => {
             renderItem={renderItem}
             showsVerticalScrollIndicator={false}
             contentContainerStyle={styles.flatList}
-            ItemSeparatorComponent={() => <View style={styles.divider} />}
           />
         </View>
       </View>
@@ -163,10 +164,10 @@ const Detail = (props: any) => {
 };
 
 const mapStateToProps = (state: any) => ({
-  dataCharacter: state.dataCharacter,
+  dataFavoriteMovies: state.dataFavoriteMovies,
 });
 
 const mapDispatchToProps = (dispatch: any) =>
   bindActionCreators(ActionCreators, dispatch);
 
-export default connect(mapStateToProps, mapDispatchToProps)(Detail);
+export default connect(mapStateToProps, mapDispatchToProps)(Favorites);

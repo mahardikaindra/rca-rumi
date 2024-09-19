@@ -1,99 +1,73 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import {connect} from 'react-redux';
-import {
-  useColorScheme,
-  FlatList,
-  TouchableOpacity,
-  View,
-  Text,
-} from 'react-native';
-import FastImage from 'react-native-fast-image';
+import {useColorScheme, TouchableOpacity, View, Text} from 'react-native';
 import {bindActionCreators} from 'redux';
 import {ActionCreators} from '../../redux/actions';
 import {Container, NavigationBar} from '../../components';
 import {styles} from '../../assets/styles';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
-import di from '../../di';
-// import {styles} from '../../assets/styles'
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 const Home = (props: any) => {
-  const [dataSource, setDataSource] = useState([]);
-  const [isLoading, setLoading] = useState(true);
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.lighter : Colors.white,
   };
 
-  useEffect(() => {
-    (async () => {
-      const data = await di.character.getAllCharacter();
-      if (data) {
-        setLoading(false);
-        setDataSource(data.results);
-      } else {
-        setLoading(false);
-        setDataSource([]);
-      }
-    })();
-  }, []);
-
-  const renderItem = ({item}: any) => {
-    return (
-      <TouchableOpacity
-        onPress={() => {
-          props.setDetailCharacter(item.id);
-          props.navigation.navigate('Detail');
-        }}>
-        <View key={item.id} style={styles.itemCharacter}>
-          <FastImage
-            source={{uri: `${item.image}`}}
-            style={styles.avatar}
-            resizeMode={'contain'}
-          />
-          <View style={styles.info}>
-            <Text style={styles.name}>{item.name}</Text>
-            <Text style={styles.species}>{item.species}</Text>
-          </View>
-        </View>
-      </TouchableOpacity>
-    );
-  };
-
-  const shimmerLoading = () => {
-    let placeholder = [],
-      i;
-    for (i = 0; i < 6; i++) {
-      placeholder.push(
-        <View key={i} style={styles.itemCharacter}>
-          <View style={styles.avatarShimmer} />
-          <View style={styles.info}>
-            <View style={styles.nameShimmer} />
-            <View style={styles.speciesShimmer} />
-          </View>
-        </View>,
-      );
-    }
-    return placeholder;
-  };
-
-  const listCharacters = () => {
-    return (
-      <FlatList
-        data={dataSource}
-        renderItem={renderItem}
-        showsVerticalScrollIndicator={false}
-        contentContainerStyle={styles.flatList}
-      />
-    );
-  };
-
   return (
     <Container>
       <View style={backgroundStyle}>
-        <NavigationBar title={'Characters'} back={false} onPress={() => {}} />
+        <NavigationBar title={'Home Page'} back={false} onPress={() => {}} />
         <View style={styles.wrapper}>
-          {isLoading ? shimmerLoading() : listCharacters()}
+          <View style={styles.menuContainer}>
+            <TouchableOpacity
+              style={styles.menuItem}
+              onPress={() => props.navigation.navigate('Characters')}>
+              <Icon
+                name="users"
+                size={24}
+                color={isDarkMode ? Colors.white : Colors.black}
+              />
+              <Text style={styles.menuText}>Characters</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.menuItem}
+              onPress={() => {
+                props.setDetailCharacter(1);
+                props.navigation.navigate('Detail');
+              }}>
+              <Icon
+                name="user"
+                size={24}
+                color={isDarkMode ? Colors.white : Colors.black}
+              />
+              <Text style={styles.menuText}>Profile</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.menuItem}
+              onPress={() => props.navigation.navigate('Favorites')}>
+              <Icon
+                name="star"
+                size={24}
+                color={isDarkMode ? Colors.white : Colors.black}
+              />
+              <Text style={styles.menuText}>Character Favorites</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.menuItem}
+              onPress={() => props.navigation.navigate('Settings')}>
+              <Icon
+                name="cog"
+                size={24}
+                color={isDarkMode ? Colors.white : Colors.black}
+              />
+              <Text style={styles.menuText}>Setting</Text>
+            </TouchableOpacity>
+          </View>
+          <View style={styles.versionContainer}>
+            <Text style={styles.versionText}>Version 1.0.0</Text>
+          </View>
         </View>
       </View>
     </Container>

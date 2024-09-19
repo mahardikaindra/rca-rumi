@@ -1,7 +1,22 @@
-import {SET_DATA_MOVIES, SET_CHARACTER_ID} from '../types';
+import {
+  SET_DATA_MOVIES,
+  SET_CHARACTER_ID,
+  SET_DATA_FAVORITE_MOVIES,
+  SET_REMOVE_FAVORITE_MOVIES,
+} from '../types';
 
 const setDataMovies = (data: object) => ({
   type: SET_DATA_MOVIES,
+  payload: data,
+});
+
+const setFavoriteMovies = (data: object) => ({
+  type: SET_DATA_FAVORITE_MOVIES,
+  payload: data,
+});
+
+const setRemoveFavoriteMovies = (data: object) => ({
+  type: SET_REMOVE_FAVORITE_MOVIES,
   payload: data,
 });
 
@@ -27,5 +42,17 @@ const setDataCharacter = (id: number) => ({
 export const setDetailCharacter = (id: number) => {
   return (dispatch: any) => {
     dispatch(setDataCharacter(id));
+  };
+};
+
+export const addToFavorites = (data: object) => {
+  return (dispatch: any) => {
+    dispatch(setFavoriteMovies(data));
+  };
+};
+
+export const removeFavorites = (data: object) => {
+  return (dispatch: any) => {
+    dispatch(setRemoveFavoriteMovies(data));
   };
 };
